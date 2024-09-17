@@ -30,6 +30,19 @@ The dataset is provided as MentalHealthSurvey.csv. Kaggle : https://www.kaggle.c
 ## Tools
 - Python
 
+## Features
+### Data Cleaning: 
+Detects and handles missing values by either filling them with zeros or dropping them.
+
+### Exploratory Data Analysis (EDA):
+- Calculates summary statistics (mean, median, etc.) for numerical columns such as depression, anxiety, and isolation.
+- Identifies unique values for categorical columns like gender.
+- Groups the data by gender to calculate average mental health scores.
+
+## Visualization:
+- Bar plot of average mental health scores (depression, anxiety, isolation) by gender.
+- Correlation heatmap to visualize relationships between numerical features.
+
 ## Requirements
 Before running the analysis, ensure that the following Python libraries are installed:
 - pandas
@@ -54,4 +67,24 @@ gender_group.plot(kind='bar')
 plt.title('Average Mental Health Scores by Gender')
 plt.ylabel('Score')
 plt.show()
+
+![Barchart](https://github.com/user-attachments/assets/68fdbcb9-56ec-414d-b000-ffc34a002b18)
+
+#### Calculate and plot the correlation heatmap
+correlation_matrix = numerical_data.corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Heatmap')
+plt.show()
+
+![Heatmap _MH](https://github.com/user-attachments/assets/ef847d8d-97ef-414a-b440-6459839a76dc)
+
+## Results
+- Summary Statistics: Summary statistics for mental health metrics like depression, anxiety, and isolation are calculated.
+- Mental Health by Gender: The bar plot shows average scores for each gender, giving insights into gender-based differences in mental health.
+- Correlation Analysis: The heatmap provides insights into relationships between the numerical variables in the dataset.
+
+
+
+
 
